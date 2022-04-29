@@ -133,6 +133,7 @@ nav img {
     width: 100%;
     margin: auto;
     text-align: center;
+    padding-bottom: 75px;
 }
 
 .intro-blog h1 {
@@ -166,16 +167,7 @@ nav img {
 
 .articulos img {
     width: 100%;
-    border-radius: 10px;
-}
-
-.layer {
-    background: rgba(125, 181, 35, 0.4);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 10px;    
 }
 
 /*---------Contacto---------*/
@@ -266,4 +258,73 @@ nav img {
     border: solid 1px #999;
     overflow: auto;
     resize: none;
+}
+
+/*Clientes*/
+
+.clientes {
+    background-color: #F5F6F7;
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/*Redes Sociales*/
+
+.redes {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(57,57,57,0.5),rgba(57,57,57,0.5)), url(images/socials-test.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socials-text {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.socials-text h2 {
+    font-size: 70px;
+}
+
+.socials-text p {
+    font-size: 40px;
+}
+
+.redes-links {
+    display: flex;
+    margin-left: 31%;
+    margin-top: 15px;
+}
+
+.redes-links a {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(137, 195, 45, .5);
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05);
+    margin: 0 30px;
+    border-radius: 50%;
+}
+
+.redes-links a .fa-brands {
+    font-size: 50px;
+    line-height: 90px;   
+}
+
+.redes-links a:hover {
+    background-color: rgba(137, 195, 45, .7);
 }
