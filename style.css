@@ -328,3 +328,46 @@ nav img {
 .redes-links a:hover {
     background-color: rgba(137, 195, 45, .7);
 }
+
+/* Nosotros Page */
+
+.header-nosotros {
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(57,57,57,0.5),rgba(57,57,57,0.5)), url(images/nosotros\ back\ test.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro p {
+    width: 50%;
+}
+
+.foto-nosotros {
+
+    width: 100%;
+    margin-top: 3%;
+
+}
+
+.long-about {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #F5F6F7;
+}
+
+.long-about p {
+    width: 80%;
+    font-size: 20px;
+    text-align: left;
+    color: #4b4f58;
+}
