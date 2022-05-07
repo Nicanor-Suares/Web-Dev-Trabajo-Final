@@ -9,7 +9,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(57,57,57,0.5),rgba(57,57,57,0.5)), url(images/banner1.jpg);
+    background-image: linear-gradient(rgba(57,57,57,0.5),rgba(57,57,57,0.5)), url(images/banner1\ test.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -329,6 +329,17 @@ nav img {
     background-color: rgba(137, 195, 45, .7);
 }
 
+footer {
+    background-color: #38393B;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
 /* Nosotros Page */
 
 .header-nosotros {
@@ -349,6 +360,10 @@ nav img {
 
 .intro p {
     width: 50%;
+}
+
+.intro a {
+    color: black;
 }
 
 .foto-nosotros {
