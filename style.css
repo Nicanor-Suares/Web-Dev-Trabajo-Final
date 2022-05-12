@@ -103,6 +103,7 @@ nav img {
 .intro p {
     font-size: 20px;
     text-align: left;
+    width: 50%;
     float: left;
     margin-top: 6%;
     margin-left: 15%;
@@ -119,11 +120,8 @@ nav img {
     border-radius: 5px;
 }
 .foto-about {
-    float: right;
     margin-top: 3%;
-    margin-left: 10%;
-    justify-content: right;
-
+    margin-right: 10%;
 }
 
 /*---------Intro-Blog---------*/
@@ -367,9 +365,9 @@ footer a {
 }
 
 .foto-nosotros {
-
-    width: 100%;
+    
     margin-top: 3%;
+    margin-right: 10%;
 
 }
 
