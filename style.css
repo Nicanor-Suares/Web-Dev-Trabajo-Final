@@ -428,3 +428,38 @@ footer a {
     text-align: center;
 }
 
+/*------------------BLOG----------------*/
+
+.blog h2{
+    font-size: 36px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.grid-blog{
+    padding: 4% 7% 7% 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-art{
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-art img {
+    width: 300px;
+}
+
+.grid-art h3{
+    padding: 1%;
+    font-size: 26px;
+}
+
+.grid-art p{
+    font-size: 16px;
+    color: #4b4f58;
+    padding: 1%;
+}
