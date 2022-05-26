@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale= 1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
     <title>Vital Fitness</title>
     <link rel="icon" href="images/Vital Favicon.png">
     <script src="https://kit.fontawesome.com/4bb66cffa8.js" crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
-<script src="./script.js"></script>
+<script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -80,14 +80,14 @@
     <p>Hablemos sobre tus objetivos y desarrollemos un plan a tu medida.</p>
     <div class="form-container">
     <div class="formulario">
-    <form action="/formulario" method="post">
+    <form onsubmit="validation()">
       <div class="input-group">
-      <input id="nombre" type="text" name="nombre" placeholder="Nombre" required/>
-      <input id="apellido" type="text" name="apellido" placeholder="Apellido" required>
+      <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+      <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
       </div>
-      <input id="email" type="email" name="email" placeholder="Correo electrónico" required/>
-      <textarea name="message" id="message" placeholder="Mensaje" required></textarea>
-      <input type="button" value="Enviar" onclick="validation()">
+      <input id="email" type="text" name="email" placeholder="Correo electrónico"/>
+      <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+      <button id="boton" type="submit">Enviar</button>
     <!--change for submit after (also CSS)-->
     </form>
     </div>
@@ -99,14 +99,26 @@
       <h2>¿Qué dicen mis atletas?</h2>
     </div>
     <div class="carousel">
-      <div class="cards">
         <div class="card">
-          <img src="" alt="">
+          <div class="carousel-left">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+          </div>
+          <div class="imagen-carousel">
+          <img id="imagen-car" src="images/cliente1.jpg"/>
+          </div>
+          <div class="client-review">
+          <div class="client">
+            <h4>Lionel Messi</h4>
+          </div>
+          <div class="review">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim.</p>
+          </div>
+          </div>
+          <div class="carousel-right"> 
+            <i class="fa-solid fa-circle-chevron-right" onclick="nextCard()"></i>
+          </div>
         </div>
-      </div>
     </div>
-  
-
   </section>
 
   <section class="redes">
@@ -125,7 +137,6 @@
   <footer>
     <p>Vital Fitness 2022© | Con ❤ desde Argentina | <a href="./index.html" >Back to top</a></p>
   </footer>
-
 
 </body>
 </html>

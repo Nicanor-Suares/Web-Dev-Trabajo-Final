@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale= 1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
     <title>Vital Fitness | Nosotros</title>
     <link rel="icon" href="images/Vital Favicon.png">
     <script src="https://kit.fontawesome.com/4bb66cffa8.js" crossorigin="anonymous"></script>
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+<script src="./script.js"></script>
 </head>
 <body>
 
@@ -43,14 +44,18 @@
   <p>Hablemos sobre tus objetivos y desarrollemos un plan a tu medida.</p>
   <div class="form-container">
     <div class="formulario">
-    <form action="/formulario" method="post">
+    <form onsubmit="validation()">
       <div class="input-group">
-      <input id="nombre" type="text" name="nombre" placeholder="Nombre" required/>
-      <input id="apellido" type="text" name="apellido" placeholder="Apellido" required>
+      <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+      <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
       </div>
-      <input id="email" type="email" name="email" placeholder="Correo electrónico" required/>
-      <textarea name="message" id="message" placeholder="Mensaje" required></textarea>
-      <input type="button" value="Enviar">
+      <input id="email" type="text" name="email" placeholder="Correo electrónico"/>
+      <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+      <button id="boton" type="submit">Enviar</button>
+    <!--change for submit after (also CSS)-->
+    </form>
+    </div>
+    </div>
     <!--change for submit after (also CSS)-->
     </form>
     </div>
