@@ -1,3 +1,24 @@
+/*
+INDEX:
+
+-15: header
+-64: Navbar
+-93: Intro-About-Me
+-138: Intro-Blog
+-185: Intro-Contacto
+-221: Form
+-290: Clients
+-310: Carousel
+-385: Redes Sociales
+-444: Footer
+-455: Nosotros-Page
+-502: Contacto-Page
+-536: Blog
+-572: Articles 
+
+*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -168,6 +189,7 @@ nav img {
 .articulos img {
     width: 100%;
     border-radius: 10px;    
+    display: block;
 }
 
 /*---------Intro-Contacto---------*/
@@ -205,6 +227,8 @@ nav img {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
+/*----------FORM---------*/
 
 .input-group {
 
@@ -268,7 +292,31 @@ nav img {
     resize: none;
 }
 
-/*Clientes*/
+.formulario small {
+    visibility: hidden;
+}
+
+.formulario.error button {
+    background-color: red;
+    font-size: 1.25em;
+    height: 50px;
+    width: 100%;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+.formulario.error button:hover {
+    background-color: rgb(204, 13, 13);
+}
+
+.formulario.error small {
+    visibility: visible;
+    color: red;
+    font-size: 20px;
+}
+
+/*-----------------Clientes------------*/
 
 .clientes-container {
 
@@ -286,6 +334,10 @@ nav img {
     font-size: 35px;
     padding-bottom: 10px;
 }
+
+
+/*---------Carousel---------*/
+
 
 .carousel{
 
@@ -324,7 +376,9 @@ nav img {
 }
 
 .client-review {
-    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .client-review h4 {
@@ -357,7 +411,7 @@ nav img {
     
 }
 
-/*Redes Sociales*/
+/*--------------Redes-Sociales----------*/
 
 .redes {
     min-height: 100vh;
@@ -416,6 +470,8 @@ nav img {
     background-color: rgba(137, 195, 45, .7);
 }
 
+/*------------------Footer-------------------*/
+
 footer {
     background-color: #38393B;
     text-align: center;
@@ -427,7 +483,7 @@ footer a {
     color: white;
 }
 
-/* Nosotros Page */
+/*-------------Nosotros-Page-------------*/
 
 .header-nosotros {
 
@@ -462,21 +518,26 @@ footer a {
 
 .long-about {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: #F5F6F7;
 }
 
-.long-about p {
+.long-about-text {
     width: 80%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5%;
     font-size: 20px;
-    text-align: left;
     color: #4b4f58;
+    text-align: justify;
 }
 
 /*-----------Contacto-----------*/
-
-/*---------Contacto---------*/
 
 .contacto {
     min-height: 100vh;
@@ -544,4 +605,49 @@ footer a {
     font-size: 16px;
     color: #4b4f58;
     padding: 1%;
+}
+
+/*-----------ARTICULOS----------*/
+
+.header-arts {
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(57,57,57,0.5),rgba(57,57,57,0.5)), url(images/arts-background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.art-container{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F5F6F7;
+}
+
+.art-text {
+    width: 80%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5%;
+}
+
+.art-text h1 {
+    font-size: 20px;
+}
+
+.art-text p{
+    padding: 3%;
+    font-size: 18px;
+}
+
+.art-text li{
+    text-align: left;
 }

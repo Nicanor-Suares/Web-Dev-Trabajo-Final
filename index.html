@@ -80,13 +80,33 @@
     <p>Hablemos sobre tus objetivos y desarrollemos un plan a tu medida.</p>
     <div class="form-container">
     <div class="formulario">
-    <form onsubmit="validation()">
+    <form id="form" onsubmit=" return validation()">
       <div class="input-group">
-      <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
-      <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
+      <div class="form-vali">
+        <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <i class="fa-solid fa-circle-check"></i>
+        <small>Error</small>
       </div>
+      <div class="form-vali">
+        <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <i class="fa-solid fa-circle-check"></i>
+        <small>Error</small>
+      </div>
+      </div>
+      <div class="form-vali">
       <input id="email" type="text" name="email" placeholder="Correo electrónico"/>
+      <i class="fa-solid fa-circle-exclamation"></i>
+        <i class="fa-solid fa-circle-check"></i>
+        <small>Error</small>
+      </div>
+      <div class="form-vali">
       <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <i class="fa-solid fa-circle-check"></i>
+        <small>Error</small>
+      </div>
       <button id="boton" type="submit">Enviar</button>
     <!--change for submit after (also CSS)-->
     </form>
@@ -101,7 +121,7 @@
     <div class="carousel">
         <div class="card">
           <div class="carousel-left">
-            <i class="fa-solid fa-circle-chevron-left"></i>
+            <i class="fa-solid fa-circle-chevron-left" onclick="previousCard()"></i>
           </div>
           <div class="imagen-carousel">
           <img id="imagen-car" src="images/cliente1.jpg"/>

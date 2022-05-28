@@ -2,7 +2,7 @@ var cards = [];
 
 cards.push({
 
-    imagenCarousel: "/images/cliente1.jpg",
+    imagenCarousel: "./images/cliente1.jpg",
     client: "Lionel Messi",
     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim."
 
@@ -10,7 +10,7 @@ cards.push({
 
 cards.push({
 
-    imagenCarousel: "/images/cliente2.jpg",
+    imagenCarousel: "./images/cliente2.jpg",
     client: "LeBron James",
     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim."
 
@@ -18,7 +18,7 @@ cards.push({
 
 cards.push({
 
-    imagenCarousel: "/images/cliente3.jpg",
+    imagenCarousel: "./images/cliente3.jpg",
     client: "Serena Williams",
     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim."
 
@@ -28,24 +28,46 @@ i = 0;
 
 function nextCard(){
 
-    console.log(cards[0]);
-    console.log(cards[1]);
-    console.log(cards[2]);
-
     i ++;
-    if(i > 3){
+    if(i >= 3){
         i = 0;
     }
 
     img = document.getElementById("imagen-car");
     img.src = cards[i].imagenCarousel;
     img.parentNode.classList;
-    client = document.querySelector(".clent");
+    client = document.querySelector(".client h4");
     client.innerHTML = cards[i].client;
-    review = document.querySelector(".review");
+    review = document.querySelector(".review p");
     review.innerHTML = cards[i].review;
     
 }
+
+function previousCard(){
+
+    i--;
+
+    if(i < 0){
+        i = 2;
+    }
+
+    img = document.getElementById("imagen-car");
+    img.src = cards[i].imagenCarousel;
+    img.parentNode.classList;
+    client = document.querySelector(".client h4");
+    client.innerHTML = cards[i].client;
+    review = document.querySelector(".review p");
+    review.innerHTML = cards[i].review;
+
+}
+
+function changeCarousel(){
+
+    setInterval(nextCard, 7000);
+
+}
+
+changeCarousel();
 
 
 function validation(){
@@ -58,7 +80,6 @@ function validation(){
     if(nombre.value.trim() == ""){
         alert("Por favor, ingrese un nombre");
         //document.querySelector.appendChild(<p>test</p>)
-        messages.push("test")
         return false;
     }
 
@@ -74,11 +95,6 @@ function validation(){
         return false;
     }
 
-
-    console.log(nombre.value);
-    return false;
-
 }
 
 
-//add autofocus on error
