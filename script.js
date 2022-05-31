@@ -12,7 +12,7 @@ cards.push({
 
     imagenCarousel: "./images/cliente2.jpg",
     client: "LeBron James",
-    review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim."
+    review: "Lorem ipsum dolor sit amet, vel blandit enim. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, consectetur adipiscing elit."
 
 });
 
@@ -20,7 +20,7 @@ cards.push({
 
     imagenCarousel: "./images/cliente3.jpg",
     client: "Serena Williams",
-    review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id dignissim quam. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim."
+    review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ligula sed elit gravida auctor. Vivamus quis venenatis purus, vel blandit enim. Sed id dignissim quam."
 
 });
 
@@ -72,29 +72,68 @@ changeCarousel();
 
 function validation(){
 
-    let nombre = document.querySelector("#nombre");
-    let apellido = document.getElementById("apellido");
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
+    const nombre = document.querySelector("#nombre");
+    const apellido = document.getElementById("apellido");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
 
     if(nombre.value.trim() == ""){
-        alert("Por favor, ingrese un nombre");
-        //document.querySelector.appendChild(<p>test</p>)
+        mostrarError(nombre, 'Ingrese un nombre');
         return false;
     }
 
     if(apellido.value.trim() == ""){
-        alert("Por favor, ingrese un apellido");
+        mostrarError(apellido, 'Ingrese un apellido');
         return false;
     }
 
     let er = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
     if(!er.test(email.value)){
-        alert("Por favor, ingrese un email válido")
+        mostrarError(email, 'Ingrese un email válido');
         return false;
     }
 
+    if(message.value.trim() == ""){
+        mostrarError(message, 'Ingrese un mensaje');
+        return false;
+    }
+
+    reset(nombre, apellido, email, message);
+    return false;
+
 }
 
+function mostrarError(input, mensaje){
+
+    let formValiStyle = input.parentElement;
+    let mensajeError = formValiStyle.querySelector('small');
+
+    mensajeError.innerText = mensaje;
+
+    formValiStyle.className = 'formulario error';
+
+    return false;
+
+}
+
+function reset(nombre, apellido, email, mensaje){
+
+    let nameStyle = nombre.parentElement;
+    nameStyle.className = "formulario";
+    
+    let apellidoStyle = apellido.parentElement;
+    apellidoStyle.className = "formulario";
+
+    let emailStyle = email.parentElement;
+    emailStyle.className = "formulario";
+
+    let mensajeStyle = mensaje.parentElement;
+    mensajeStyle.className = "formulario";
+    
+    form.reset();
+    
+    return false;
+
+}
 
