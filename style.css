@@ -252,6 +252,7 @@ nav img {
 
 .intro-contacto h2 {
     width: 100%;
+    font-size: 30px;
     color: white;
     position: absolute;
     top:40%;
@@ -261,10 +262,9 @@ nav img {
 }
 
 .intro-contacto p {
-    font-size: 20px;
+    font-size: 22px;
     text-align: left;
     float: left;
-    flex-wrap: wrap;
     width: 100%;
     color: white;
     position: absolute;
@@ -594,6 +594,10 @@ footer a {
 
 }
 
+.foto-nosotros img {
+    border-radius: 10px;
+}
+
 .long-about {
     display: flex;
     flex-direction: column;
@@ -613,6 +617,10 @@ footer a {
     font-size: 20px;
     color: #4b4f58;
     text-align: justify;
+}
+
+.long-about-text a{
+    color: black;
 }
 
 /*-----------Contacto-----------*/
