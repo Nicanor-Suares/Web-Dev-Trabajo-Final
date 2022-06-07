@@ -1,20 +1,20 @@
 /*
 INDEX:
 
--15: header
--64: Navbar
--93: Intro-About-Me
--138: Intro-Blog
--185: Intro-Contacto
--221: Form
--290: Clients
--310: Carousel
--385: Redes Sociales
--444: Footer
--455: Nosotros-Page
--502: Contacto-Page
--536: Blog
--572: Articles 
+-31: header
+-77: Navbar
+-105: Intro-About-Me
+-153: Intro-Blog
+-241: Intro-Contacto
+-277: Form
+-395: Clients
+-415: Carousel
+-490: Redes Sociales
+-551: Footer
+-564: Nosotros-Page
+-626: Contacto-Page
+-660: Blog
+-753: Articles 
 
 */
 
@@ -749,6 +749,8 @@ footer a {
     text-align: left;
 }
 
+
+/*--------MEDIA-QUERIES---------*/
 
 @media (max-width: 700px){
 
