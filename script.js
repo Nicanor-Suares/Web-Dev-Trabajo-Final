@@ -77,9 +77,9 @@ function validate(){
     if(!validation()){
         validation();
     }else{
-        alert("Formulario enviado con éxito");
         reset(nombre, apellido, email, message);
         form.reset();
+        alert("Formulario enviado con éxito");
     }
 
     return false;
@@ -117,12 +117,9 @@ function validation(){
         tieneError = false;
     }
 
-    console.log(tieneError);
-
     if(tieneError){
         return false;
     }else{
-        reset(nombre, apellido, email, message);
         return true;
     }
 
