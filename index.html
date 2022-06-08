@@ -87,29 +87,27 @@
     <p>Hablemos sobre tus objetivos y desarrollemos un plan a tu medida.</p>
     <div class="form-container">
     <div class="formulario">
-    <form id="form" onsubmit=" return validation()">
+    <form id="form" onsubmit=" return validate()">
       <div class="input-group">
       <div class="form-vali">
         <input id="nombre" type="text" name="nombre" placeholder="Nombre"/>
         <i class="fa-solid fa-circle-exclamation"></i>    
-        <small>Error</small>
       </div>
       <div class="form-vali">
         <input id="apellido" type="text" name="apellido" placeholder="Apellido"/>
-        <i class="fa-solid fa-circle-exclamation"></i>        <small>Error</small>
+        <i class="fa-solid fa-circle-exclamation"></i>
       </div>
       </div>
       <div class="form-vali">
       <input id="email" type="text" name="email" placeholder="Correo electrónico"/>
       <i class="fa-solid fa-circle-exclamation"></i>
-        <small>Error</small>
       </div>
       <div class="form-vali">
       <textarea name="message" id="message" placeholder="Mensaje"></textarea>
         <i class="fa-solid fa-circle-exclamation"></i>
-        <small>Error</small>
       </div>
       <button id="boton" type="submit">Enviar</button>
+      <div class="mensaje-error"></div>
     <!--change for submit after (also CSS)-->
     </form>
     </div>

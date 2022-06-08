@@ -69,6 +69,19 @@ function changeCarousel(){
 
 changeCarousel();
 
+let cont = 0;
+
+function validate(){
+
+    if(!validation){
+        reset(nombre, apellido, email, message);
+    }else{
+       validation();        
+    }
+
+    return false;
+
+}
 
 function validation(){
 
@@ -76,43 +89,55 @@ function validation(){
     const apellido = document.getElementById("apellido");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
+    let tieneError = false;
 
     if(nombre.value.trim() == ""){
         mostrarError(nombre, 'Ingrese un nombre');
-        return false;
+        tieneError = true;
     }
 
     if(apellido.value.trim() == ""){
         mostrarError(apellido, 'Ingrese un apellido');
-        return false;
+        tieneError = true;
     }
 
     let er = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
     if(!er.test(email.value)){
         mostrarError(email, 'Ingrese un email válido');
-        return false;
+        tieneError = true;
     }
 
     if(message.value.trim() == ""){
         mostrarError(message, 'Ingrese un mensaje');
-        return false;
+        tieneError = true;
     }
 
-    reset(nombre, apellido, email, message);
-    return false;
+    if(tieneError){
+        return false;
+    }else{
+        reset(nombre, apellido, email, message);
+        return true;
+    }
 
 }
 
 function mostrarError(input, mensaje){
 
     let formValiStyle = input.parentElement;
-    let mensajeError = formValiStyle.querySelector('small');
+    let mensajeError = document.createElement("small");
 
+    mensajeError.classList.add('texto-error');
+
+    if(cont < 4){
     mensajeError.innerText = mensaje;
 
     formValiStyle.className = 'formulario error';
 
+    formValiStyle.appendChild(mensajeError);
+    }
+
+    cont++;
     return false;
 
 }
@@ -121,7 +146,7 @@ function reset(nombre, apellido, email, mensaje){
 
     let nameStyle = nombre.parentElement;
     nameStyle.className = "formulario";
-    
+
     let apellidoStyle = apellido.parentElement;
     apellidoStyle.className = "formulario";
 
@@ -130,9 +155,15 @@ function reset(nombre, apellido, email, mensaje){
 
     let mensajeStyle = mensaje.parentElement;
     mensajeStyle.className = "formulario";
-    
+
+    let errores = document.querySelectorAll(".texto-error");
+    errores.forEach(element => {
+        element.remove();
+    });
+
     form.reset();
     
+    cont = 0;
     return false;
 
 }

@@ -313,6 +313,7 @@ nav img {
 .formulario button {
     background-color: #89C32D;
     font-size: 1.25em;
+    margin-top: 20px;
     height: 50px;
     width: 100%;
     color: white;
@@ -337,7 +338,7 @@ nav img {
 }
 
 .formulario i {
-    visibility: hidden;
+    display: none;
 }
 
 .formulario.error input {
@@ -364,12 +365,12 @@ nav img {
 }
 
 .formulario.error i {
-    visibility: visible;
+    display: inline;
     color: red;
 }
 
 .formulario small {
-    visibility: hidden;
+    display: none;
 }
 
 .formulario.error button {
@@ -387,7 +388,7 @@ nav img {
 }
 
 .formulario.error small {
-    visibility: visible;
+    display: inline;
     color: red;
     font-size: 15px;
 }
