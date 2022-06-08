@@ -77,7 +77,7 @@ function validate(){
     if(!validation()){
         validation();
     }else{
-        alert("Formulario");
+        alert("Formulario enviado con éxito");
         reset(nombre, apellido, email, message);
         form.reset();
     }
