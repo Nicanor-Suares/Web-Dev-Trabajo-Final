@@ -70,13 +70,16 @@ function changeCarousel(){
 changeCarousel();
 
 let cont = 0;
+let tieneError = false;
 
 function validate(){
 
-    if(!validation){
-        reset(nombre, apellido, email, message);
+    if(!validation()){
+        validation();
     }else{
-       validation();        
+        alert("Formulario");
+        reset(nombre, apellido, email, message);
+        form.reset();
     }
 
     return false;
@@ -89,7 +92,6 @@ function validation(){
     const apellido = document.getElementById("apellido");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
-    let tieneError = false;
 
     if(nombre.value.trim() == ""){
         mostrarError(nombre, 'Ingrese un nombre');
@@ -111,7 +113,11 @@ function validation(){
     if(message.value.trim() == ""){
         mostrarError(message, 'Ingrese un mensaje');
         tieneError = true;
+    }else{
+        tieneError = false;
     }
+
+    console.log(tieneError);
 
     if(tieneError){
         return false;
@@ -160,8 +166,6 @@ function reset(nombre, apellido, email, mensaje){
     errores.forEach(element => {
         element.remove();
     });
-
-    form.reset();
     
     cont = 0;
     return false;
